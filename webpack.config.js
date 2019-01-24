@@ -1,5 +1,4 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const FileManagerPlugin = require('filemanager-webpack-plugin')
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 const path = require('path')
 
@@ -17,13 +16,6 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin(),
     new ForkTsCheckerWebpackPlugin(),
-    new FileManagerPlugin({
-      onEnd: {
-        move: [
-          { source: 'js/index.html', destination: 'index.html' }
-        ]
-      }
-    })
   ],
   module: {
     rules: [
