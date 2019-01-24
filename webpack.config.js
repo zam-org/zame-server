@@ -14,8 +14,10 @@ module.exports = {
     contentBase: '.'
   },
   plugins: [
-    new HtmlWebpackPlugin(),
-    new ForkTsCheckerWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      hash: true
+    }),
+    new ForkTsCheckerWebpackPlugin()
   ],
   module: {
     rules: [
