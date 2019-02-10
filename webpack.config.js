@@ -6,7 +6,6 @@ module.exports = {
   context: __dirname,
   entry: {
     app: './src/index.ts',
-    hello: './src/components/hello.ts'
   },
   devtool: 'inline-source-map',
   mode: 'development',

@@ -1,29 +1,26 @@
 // Polyfill DOM env for mithril
 import m, { RouteResolver } from "mithril";
-import ZeroFrame from "zeroframe";
-const zeroframe = new ZeroFrame();
 
 import Resolver from "./mithril-zeroframe-router";
+import zeroframe from "./ZeroFrame"
 
 // Route components
-import Hello from "./components/hello";
+import Maps from "./components/maps";
+import About from "./components/about";
 
-const Main = {
-    view() {
-        return m.render(document.body, [
-            m("h1", "main page"),
-            m("a", {href: "#!/hello"}, "hello"),
-        ]);
-    },
-};
-
-const asdjjkHJDAKhsakdLHASLJKDh1 = 5;
+/*
+m.render(document.body, [
+    m("ZAME!"),
+    m("a", {href: "/", config: m.route}, "Browse"),
+    m("a", {href: "/about", config: m.route}, "About"),
+    m("div", {"id": "main-body"}),
+]);*/
 
 // Set mithril's default RouteResolver to zeroframeRouter, which allows
 // interoperability with ZeroNet's iframe-based design. (See
 // mithril-zeroframe-router.ts for more details)
 zeroframe.cmd("wrapperInnerLoaded", []);
 m.route(document.body, "/", {
-    "/": Resolver(Main),
-    "/hello": Resolver(Hello),
+    "/": Resolver(Maps),
+    "/about": Resolver(About),
 });

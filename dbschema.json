@@ -6,8 +6,9 @@
     ".+/data.json": { 
       "to_table": [ 
         {
-          "node": "map", 
-          "table": "map"
+          "node": "map",
+          "table": "map",
+          "key_col": "id"
         },
         {
           "node": "map_vote", 
@@ -15,30 +16,17 @@
           "key_col": "map_id",
           "val_col": "vote"
         }
-      ],
-      "to_keyvalue": ["next_map_id"]
+      ]
     },
     ".+/content.json": {
-      "to_table": [
-        {
-          "node": "includes",
-          "table": "user",
-          "key_col": "path",
-          "import_cols": ["user_id", "user_name", "max_size", "added"],
-            
-          "replaces": {
-            "path": {"content.json": "data.json"}
-          }
-        }
-      ],
-      "to_json_table": [ "cert_auth_type", "cert_user_id" ]  
+      "to_keyvalue": ["cert_user_id"]
     }
   },
   "tables": { 
     "map": { 
       "cols": [ 
-        ["id", "INTEGER"],
-        ["title", "TEXT"],
+        ["id", "TEXT"],
+        ["description", "TEXT"],
         ["thumbnail_path", "TEXT"],
         ["image_path", "TEXT"],
         ["filepath", "TEXT"],
@@ -47,7 +35,7 @@
         ["json_id", "INTEGER REFERENCES json (json_id)"]
       ],
       "indexes": ["CREATE UNIQUE INDEX map_key ON map(id, json_id)", "CREATE UNIQUE INDEX map_added ON map(added)"],
-      "schema_changed": 1
+      "schema_changed": 2
     },
     "map_vote": { 
       "cols": [ 
@@ -55,7 +43,7 @@
         ["vote", "INTEGER"],
         ["json_id", "INTEGER REFERENCES json (json_id)"]
       ],
-      "indexes": ["CREATE UNIQUE INDEX map_vote_key ON map_vote(map_id, json_id)", "CREATE UNIQUE INDEX vote_map_id ON map(map_id)"],
+      "indexes": ["CREATE UNIQUE INDEX map_vote_key ON map_vote(map_id, json_id)", "CREATE UNIQUE INDEX vote_map_id ON map_vote(map_id)"],
       "schema_changed": 1
     },
     "json": {  
@@ -66,7 +54,7 @@
             ["cert_auth_type", "TEXT"],
             ["cert_user_id", "TEXT"]
         ],
-        "indexes": ["CREATE UNIQUE INDEX path ON json(directory, site, file_name)"],
+        "indexes": ["CREATE UNIQUE INDEX path ON json(directory, file_name)"],
         "schema_changed": 1
     }
   }

@@ -6,22 +6,88 @@
    "sha512": "b5be4a8867d401acb6f215f85aa900ab74fdcb1aad8802794359dbb54fad57da",
    "size": 6063
   },
-  "dbschema.json": {
-   "sha512": "edd33feaaeef761de525163755d6bc9eadc4a86e62a2a3ef85d5049247dead08",
-   "size": 1980
-  },
   "index.html": {
-   "sha512": "71bd634e35c52f856217d29b2705115eb47f967b1c3dc849f8febac8872402fe",
-   "size": 649
+   "sha512": "a31fd60555ae2f36003bcbc61d32a0d2f47f965971b7f3189697a169d00abbf0",
+   "size": 210
+  },
+  "js/about.bundle.js": {
+   "sha512": "6b6099cb73b5c032c631cf4af98b57d4955541c041289c3b9080812a5ace622a",
+   "size": 175881
+  },
+  "js/app.bundle.js": {
+   "sha512": "1b98d9fb8f9fefd5c68ee44725b3362cf8f4e735da1e4442b3b92fece2bbf754",
+   "size": 212880
+  },
+  "js/hello.bundle.js": {
+   "sha512": "d513e6cb46d3084c1a92fdf45733c53a1481a6392f5e06c39ebcb26ce4f88bd8",
+   "size": 175840
+  },
+  "js/maps.bundle.js": {
+   "sha512": "8829e7cdb2095a33ac7cb41857583125b2cb19901ab7938440c89377df9d2a84",
+   "size": 178971
+  },
+  "package-lock.json": {
+   "sha512": "e0a523d5750bd01b359db9ecf3328ac73ff36185304c0404cdd106306134c818",
+   "size": 212009
+  },
+  "package.json": {
+   "sha512": "e72a9b5110f02bfbec253eb644d8dfdb78b793a6ea00b7cbfad655bf9733ba43",
+   "size": 1533
+  },
+  "src/ZeroFrame.ts": {
+   "sha512": "8408942192c1c3286faa443a449cbe8bab6cf9db3ebd7a357b527447a912d608",
+   "size": 66
+  },
+  "src/components/about.ts": {
+   "sha512": "dc0b1a9028ac9888cc2fd0dc37dfd5d5a629568e8ce87d016fbd150b2c693110",
+   "size": 395
+  },
+  "src/components/map-data.ts": {
+   "sha512": "a18fa0a2e2b69368c1fb530ebf127b28e45dac26cf522daf68d50398b7567b52",
+   "size": 745
+  },
+  "src/components/maps.ts": {
+   "sha512": "e2647e6a463200e7ab34279954026d422718a6cca0d806da49aaec2c169008e4",
+   "size": 711
+  },
+  "src/index.ts": {
+   "sha512": "81998852bead078801b2f9f987952f15008e595db6ef6ae70c9a8c89bb10493b",
+   "size": 772
+  },
+  "src/mithril-zeroframe-router.ts": {
+   "sha512": "855d948f1912886638f1cc4ec452366793f0252de30d41f7f34ad10c6c21538d",
+   "size": 1906
+  },
+  "src/zeroframe.d.ts": {
+   "sha512": "b9ade87d8d9d270e856c2b1fea0c8a6a829e3e96b651b0ccd9456e8897852fe2",
+   "size": 28
+  },
+  "tsconfig.json": {
+   "sha512": "3cb08a8613071f00ff33219c87c70ef0e399ee1ec322185e4b551f5ee2de0c1d",
+   "size": 677
+  },
+  "tslint.json": {
+   "sha512": "18062169dae2f52e583892c046063b90b155f7e40870726e261362abe609c782",
+   "size": 190
+  },
+  "webpack.config.js": {
+   "sha512": "b6d593a2d258d73800deb18ca3da866b3b69bee40c532d413c49c28c995818e9",
+   "size": 1105
   }
  },
- "ignore": "(.git)|(^.+.json)|(tests.*)|(node_modules.*)|(^\\..+)",
+ "ignore": "(.git)|(^(content|dbschema|data/.+).json)|(tests.*)|(node_modules.*)|(^\\..+)",
+ "includes": {
+  "data/users/content.json": {
+   "signers": [],
+   "signers_required": 1
+  }
+ },
  "inner_path": "content.json",
- "modified": 1547584373,
+ "modified": 1549838858,
  "postmessage_nonce_security": true,
  "signers_sign": "HGOykyETw5Osr0Wp/AgjJim4vYcra/TuWFbQ5g9ZbU8VABlpZlpRA+IFFDfoWG6A6V6tySdVf3uKbuihKrRE3KM=",
  "signs": {
-  "1LX49GcJ52xF8UGvN1obXex6u4XLwfmzZW": "Gw8AOkVAiyg1B/HweXjmjDcq8HKvt/4tLMrxzdrh1o6APJ4E6wmdDKyyOdiRUHenZEWrNxSn8KX1+MXQuF9yTFU="
+  "1LX49GcJ52xF8UGvN1obXex6u4XLwfmzZW": "HDXhEc4TGivhX+/Aa5AWFU6VAojdXh4AwuAvAk/iSSrcUq4T7aEuQ0Wp9yaXc5zd4uOqLch7hPpzju0wJ7QIfkU="
  },
  "signs_required": 1,
  "title": "ZAME!",
